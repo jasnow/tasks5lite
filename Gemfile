@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails',      github: 'rails/rails'
+gem 'rack',       github: 'rack/rack'
+gem 'arel',       github: 'rails/arel'
 
 gem 'sqlite3'
 gem 'sass'
@@ -15,7 +17,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'rb-inotify' if /linux/ =~ RUBY_PLATFORM
   gem 'launchy'
+  gem 'capybara'
 end
