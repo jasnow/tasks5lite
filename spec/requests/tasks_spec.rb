@@ -9,10 +9,9 @@ describe "Tasks", :type => :request do
     it "creates a new page" do
       visit tasks_path
       fill_in 'Task', :with => 'go to work'
-      click_button "Create Task"
 
-      expect(current_path).to eq(tasks_path)
-      expect(page).to have_content 'go to work'
+      click_button "Create Task"
+      puts "NOTE: Previous line is the one that triggers the error. Comment it out to prove it."
     end
   end
 end
